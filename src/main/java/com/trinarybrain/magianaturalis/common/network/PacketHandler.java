@@ -27,6 +27,6 @@ public class PacketHandler
   {
     network.registerMessage(packet, message, nextPacketID, Side.CLIENT);
     network.registerMessage(packet, message, nextPacketID, Side.SERVER);
-    nextPacketID += 1;
+    ++PacketHandler.nextPacketID;
   }
 }

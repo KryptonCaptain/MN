@@ -1,6 +1,9 @@
 package com.trinarybrain.magianaturalis.common.network.packet;
 
 import com.trinarybrain.magianaturalis.common.util.WorldUtil;
+
+import com.trinarybrain.magianaturalis.common.network.packet.PacketBiomeChange.BiomeChangeMessage;
+
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
@@ -27,8 +30,7 @@ public class PacketBiomeChange
     return null;
   }
   
-  public static class BiomeChangeMessage
-    implements IMessage
+  public static class BiomeChangeMessage implements IMessage
   {
     private int posX;
     private int posZ;

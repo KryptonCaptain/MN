@@ -156,9 +156,9 @@ public class BlockArcaneChest
       
       ItemStack[] items = NBTUtil.loadInventoryFromNBT(stack, chest.getSizeInventory());
       if ((items != null) && (items.length == chest.getSizeInventory())) {
-        chest.setInvetory(items);
+        chest.setInventory(items);
       } else if (chest.getChestType() == 2) {
-        chest.setInvetory(new ItemStack[77]);
+        chest.setInventory(new ItemStack[77]);
       }
       ArrayList<UserAccess> users = NBTUtil.loadUserAccesFromNBT(stack);
       if (!users.isEmpty()) {

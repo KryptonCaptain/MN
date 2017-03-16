@@ -275,7 +275,7 @@ public class ItemKey
       
       NBTTagCompound data = NBTUtil.openNbtData(stack);
       NBTTagList accessList;
-      NBTTagList accessList;
+
       if (!data.hasKey("AccessList")) {
         accessList = new NBTTagList();
       } else {

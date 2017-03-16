@@ -92,6 +92,7 @@ public class TileArcaneChest
     return stack;
   }
   
+  //TODO FIX THIS SHIT
   public void setInventorySlotContents(int index, ItemStack stack)
   {
     this.inventory[index] = stack;
@@ -100,7 +101,7 @@ public class TileArcaneChest
     }
   }
   
-  public void setInvetory(ItemStack[] inventory)
+  public void setInventory(ItemStack[] inventory)
   {
     this.inventory = inventory;
   }

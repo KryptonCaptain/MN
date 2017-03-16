@@ -1,12 +1,17 @@
 package com.trinarybrain.magianaturalis.common.util;
 
 import com.trinarybrain.magianaturalis.common.network.PacketHandler;
+import com.trinarybrain.magianaturalis.common.network.packet.PacketBiomeChange;
 import com.trinarybrain.magianaturalis.common.network.packet.PacketBiomeChange.BiomeChangeMessage;
+
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;

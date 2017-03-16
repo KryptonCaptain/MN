@@ -2,6 +2,9 @@ package com.trinarybrain.magianaturalis.common.network.packet;
 
 import com.trinarybrain.magianaturalis.common.item.focus.ItemFocusBuild;
 import com.trinarybrain.magianaturalis.common.util.FocusBuildHelper;
+
+import com.trinarybrain.magianaturalis.common.network.packet.PacketPickedBlock.PickedBlockMessage;
+
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;

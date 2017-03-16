@@ -35,7 +35,7 @@ public final class FocusBuildHelper
     NBTTagCompound data = NBTUtil.openNbtData(stack);
     NBTTagList nbttaglist = data.getTagList("magia_naturalis", 10);
     NBTTagCompound tempData;
-    NBTTagCompound tempData;
+
     if (nbttaglist == null)
     {
       nbttaglist = new NBTTagList();
@@ -75,7 +75,7 @@ public final class FocusBuildHelper
     NBTTagCompound data = NBTUtil.openNbtData(stack);
     NBTTagList nbttaglist = data.getTagList("magia_naturalis", 10);
     NBTTagCompound tempData;
-    NBTTagCompound tempData;
+
     if (nbttaglist == null)
     {
       nbttaglist = new NBTTagList();
@@ -115,7 +115,7 @@ public final class FocusBuildHelper
     NBTTagCompound data = NBTUtil.openNbtData(stack);
     NBTTagList nbttaglist = data.getTagList("magia_naturalis", 10);
     NBTTagCompound tempData;
-    NBTTagCompound tempData;
+
     if (nbttaglist == null)
     {
       nbttaglist = new NBTTagList();
@@ -147,7 +147,7 @@ public final class FocusBuildHelper
     NBTTagCompound data = NBTUtil.openNbtData(stack);
     NBTTagList nbttaglist = data.getTagList("magia_naturalis", 10);
     NBTTagCompound nbttagcompound;
-    NBTTagCompound nbttagcompound;
+
     if (nbttaglist == null)
     {
       nbttaglist = new NBTTagList();
@@ -184,48 +184,58 @@ public final class FocusBuildHelper
     return i;
   }
   
-  public static enum Meta
+  public enum Meta
   {
-    NONE,  UNIFORM;
-    
-    private Meta() {}
-    
-    public String toString()
-    {
-      switch (FocusBuildHelper.1.$SwitchMap$com$trinarybrain$magianaturalis$common$util$FocusBuildHelper$Meta[ordinal()])
-      {
-      case 1: 
-        return Platform.translate("enum.magianaturalis:none");
-      case 2: 
-        return Platform.translate("enum.magianaturalis:uniform");
+      NONE, 
+      UNIFORM;
+      
+      @Override
+      public String toString() {
+          switch (this) {
+              case NONE: {
+                  return Platform.translate("enum.magianaturalis:none");
+              }
+              case UNIFORM: {
+                  return Platform.translate("enum.magianaturalis:uniform");
+              }
+              default: {
+                  return Platform.translate("enum.magianaturalis:unknown");
+              }
+          }
       }
-      return Platform.translate("enum.magianaturalis:unknown");
-    }
   }
   
-  public static enum Shape
+  public enum Shape
   {
-    NONE,  PLANE,  CUBE,  PLANE_EXTEND,  SPHERE;
-    
-    private Shape() {}
-    
-    public String toString()
-    {
-      switch (FocusBuildHelper.1.$SwitchMap$com$trinarybrain$magianaturalis$common$util$FocusBuildHelper$Shape[ordinal()])
-      {
-      case 1: 
-        return Platform.translate("enum.magianaturalis:cube");
-      case 2: 
-        return Platform.translate("enum.magianaturalis:none");
-      case 3: 
-        return Platform.translate("enum.magianaturalis:plane");
-      case 4: 
-        return Platform.translate("enum.magianaturalis:plane.extend");
-      case 5: 
-        return Platform.translate("enum.magianaturalis:sphere");
+      NONE, 
+      PLANE, 
+      CUBE, 
+      PLANE_EXTEND, 
+      SPHERE;
+      
+      @Override
+      public String toString() {
+          switch (this) {
+              case CUBE: {
+                  return Platform.translate("enum.magianaturalis:cube");
+              }
+              case NONE: {
+                  return Platform.translate("enum.magianaturalis:none");
+              }
+              case PLANE: {
+                  return Platform.translate("enum.magianaturalis:plane");
+              }
+              case PLANE_EXTEND: {
+                  return Platform.translate("enum.magianaturalis:plane.extend");
+              }
+              case SPHERE: {
+                  return Platform.translate("enum.magianaturalis:sphere");
+              }
+              default: {
+                  return Platform.translate("enum.magianaturalis:unknown");
+              }
+          }
       }
-      return Platform.translate("enum.magianaturalis:unknown");
-    }
   }
   
   public static Shape getShapeByID(int i)

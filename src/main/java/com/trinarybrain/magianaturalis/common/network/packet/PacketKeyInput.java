@@ -5,6 +5,9 @@ import com.trinarybrain.magianaturalis.common.item.focus.ItemFocusBuild;
 import com.trinarybrain.magianaturalis.common.util.FocusBuildHelper;
 import com.trinarybrain.magianaturalis.common.util.FocusBuildHelper.Meta;
 import com.trinarybrain.magianaturalis.common.util.FocusBuildHelper.Shape;
+
+import com.trinarybrain.magianaturalis.common.network.packet.PacketKeyInput.KeyInputMessage;
+
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
@@ -18,8 +21,7 @@ import org.apache.logging.log4j.Logger;
 import thaumcraft.api.wands.ItemFocusBasic;
 import thaumcraft.common.items.wands.ItemWandCasting;
 
-public class PacketKeyInput
-  implements IMessageHandler<KeyInputMessage, IMessage>
+public class PacketKeyInput implements IMessageHandler<KeyInputMessage, IMessage>
 {
   public IMessage onMessage(KeyInputMessage message, MessageContext ctx)
   {
@@ -64,8 +66,7 @@ public class PacketKeyInput
     return null;
   }
   
-  public static class KeyInputMessage
-    implements IMessage
+  public static class KeyInputMessage implements IMessage
   {
     private byte keyID;
     

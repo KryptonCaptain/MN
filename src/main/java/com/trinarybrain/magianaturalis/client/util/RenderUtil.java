@@ -17,7 +17,7 @@ import org.lwjgl.opengl.GL11;
 
 public final class RenderUtil
 {
-  public static int RenderID = ;
+  public static int RenderID = RenderingRegistry.getNextAvailableRenderId();
   public static int RenderID2 = RenderingRegistry.getNextAvailableRenderId();
   
   public static void bindTexture(ResourceLocation resource)
