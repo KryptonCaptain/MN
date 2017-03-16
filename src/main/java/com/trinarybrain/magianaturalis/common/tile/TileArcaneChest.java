@@ -22,11 +22,9 @@ import net.minecraft.world.World;
 import thaumcraft.api.TileThaumcraft;
 import thaumcraft.api.wands.IWandable;
 
-public class TileArcaneChest
-  extends TileThaumcraft
-  implements ISidedInventory, IWandable
+public class TileArcaneChest extends TileThaumcraft implements ISidedInventory, IWandable
 {
-  private ItemStack[] inventory = new ItemStack[54];
+  private ItemStack[] inventory;
   public float lidAngle;
   public float prevLidAngle;
   public int numUsingPlayers;
@@ -37,6 +35,11 @@ public class TileArcaneChest
   public final String[] name = { "unknown", "gw", "sw" };
   private String customName;
   private static final int[] sides = { 0, 1, 2, 3, 4, 5 };
+  
+  //WIP
+  public TileArcaneChest() {
+      this.inventory = new ItemStack[this.getSizeInventory()];
+  }
   
   public String getOwnerName()
   {
@@ -93,13 +96,33 @@ public class TileArcaneChest
   }
   
   //TODO FIX THIS SHIT
+  /* //original
   public void setInventorySlotContents(int index, ItemStack stack)
   {
     this.inventory[index] = stack;
     if ((stack != null) && (stack.stackSize > getInventoryStackLimit())) {
       stack.stackSize = getInventoryStackLimit();
     }
-  }
+  }*/
+  
+  //WIP
+	@Override
+	public void setInventorySlotContents(int index, ItemStack stack) {
+	    if (index < 0 || index >= this.getSizeInventory())
+	        return;
+	
+	    if (stack != null && stack.stackSize > this.getInventoryStackLimit())
+	        stack.stackSize = this.getInventoryStackLimit();
+	        
+	    if (stack != null && stack.stackSize == 0)
+	        stack = null;
+	
+	    this.inventory[index] = stack;
+	    this.markDirty();
+	}
+  //
+  
+  
   
   public void setInventory(ItemStack[] inventory)
   {

@@ -180,7 +180,7 @@ public class ItemBiomeSampler
             if (color == null) {
               color = "5";
             }
-            aspects[(j++)] = String.format("%dx %s%s", new Object[] { Short.valueOf(tempData.getShort(aspectTag)), String.valueOf('ยง') + color, WordUtils.capitalizeFully(aspectTag) });
+            aspects[(j++)] = String.format("%dx %s%s", new Object[] { Short.valueOf(tempData.getShort(aspectTag)), String.valueOf('ง') + color, WordUtils.capitalizeFully(aspectTag) });
           }
         }
       }
